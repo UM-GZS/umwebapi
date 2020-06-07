@@ -16,7 +16,7 @@ class Index extends Controller
      */
     public function index()
     {
-      (new CeshiValidate())->goCheck();
+      (new CeshiValidate())->goCheck('login');
       return 111;
     }
 }

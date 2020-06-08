@@ -18,4 +18,10 @@ class User extends BaseController
       (new UserModel())->sendCode();
     return self::showResCodeWithOutData('发送成功');
   }
+  public function phoneLogin() {
+    // (new UserValidate())->goCheck('phonelogin');
+    // $token = (new UserModel())->phoneLogin();
+    // return self::showResCode('登录成功',['token'=>$token]);
+    return '手机号码登录';
+  }
 }

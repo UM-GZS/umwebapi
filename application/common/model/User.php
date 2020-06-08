@@ -20,7 +20,7 @@ class User extends Model
         //if($res['Code']=='OK') return Cache::set($phone,$code,config('api.alisms.expire'));
         //模拟发送验证码
          Cache::set($email,$code,config('api.EMailCode.expire'));
-         s_mail('783010603@qq.com','欢迎注册账号','你的邮箱验证码为：');
+         //send_mail($email,'欢迎注册UMWEB账号','你的邮箱验证码为：'.$code);
          throw new BaseException(['code'=>200,'msg'=>'验证码：'.$code,'errorCode'=>30005]);
         //发送失败
         throw new BaseException(['code'=>200,'msg'=>'发送失败','errorCode'=>30004]);

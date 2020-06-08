@@ -50,7 +50,7 @@ function s_mail($sendto, $title, $response) {
     // SMTP服务器上此邮箱的用户名，有的只需要@前面的部分，有的需要全名。请替换为正确的邮箱用户名
     $mail->Username = "umgzs@foxmail.com";
     // SMTP服务器上该邮箱的密码，请替换为正确的密码
-    $mail->Password = "kwvvsbfasscbbfea";
+    $mail->Password = "";
     // SMTP服务器上发送此邮件的邮箱，请替换为正确的邮箱 ,与$mail->Username 的值是对应的。
     $mail->From = "umgzs@foxmail.com";
     // 真实发件人的姓名等信息，这里根据需要填写

@@ -19,8 +19,10 @@ class User extends BaseController
     return self::showResCodeWithOutData('发送成功');
   }
   public function emailLogin() {
-     (new UserValidate())->goCheck('emaillogin');
-     $token = (new UserModel())->emailLogin();
-     return self::showResCode('登录成功',['token'=>$token]);
+	  //验证登陆信息
+	  (new UserValidate())->goCheck('emaillogin');
+	  //邮箱登陆
+	  $token = (new UserModel())->emailLogin();
+	  return self::showResCode('登录成功',['token'=>$token]);
   }
 }

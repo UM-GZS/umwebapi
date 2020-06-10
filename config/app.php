@@ -17,7 +17,7 @@ return [
     // 应用名称
     'app_name'               => 'umweb',
     // 应用地址
-    'app_host'               => 'http://api.umserver.com',
+    'app_host'               => 'https://api.umserver.com',
     // 应用调试模式
     'app_debug'              => true,
     // 应用Trace

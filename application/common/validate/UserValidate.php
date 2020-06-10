@@ -14,7 +14,7 @@ class UserValidate extends BaseValidate
      */	
 	protected $rule = [
         'email'=>'require|email',
-        'code'=>'require|number|length:4|isPectCode',
+		'code'=>'require|number|length:4|isPefectCode',
     ];
     
     /**
@@ -28,9 +28,9 @@ class UserValidate extends BaseValidate
         'email.email'=>'请输入正确的邮箱'
     ];
     protected $scene = [
-        //发送邮箱验证码
+		//发送验证码
         'sendCode'=>['email'],
-        //邮箱登录
-        'emaillogin'=>['email','code']
+		//邮箱登录
+		'emaillogin'=>['email','code'],
     ];
 }

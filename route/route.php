@@ -8,12 +8,17 @@
 // +----------------------------------------------------------------------
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
-//不需要token验证
-Route::group('api/:version/',function(){
-    Route::post('user/sendcode','api/:version.User/sendCode');
-    Route::post('user/phonelogin','api/:version.User/phoneLogin');
+//不需要验证token
+Route::group('api/:version/', function () {
+    //发送邮箱验证码
+    Route::post('user/sendcode', 'api/:version.User/sendCode');
+    //邮箱登录
+    Route::post('user/emaillogin', 'api/:version.User/emailLogin');
 });
-//需要token验证
-Route::group('api/:version/',function(){
-    Route::post('user/login','api/:version.User/login');
-})->middleware(['ApiUserAuth']);
+/* //需要验证token
+Route::group('api/:version/', function () {
+    //发送邮箱验证码
+    Route::post('user/sendcode', 'api/:version.User/sendCode');
+    //邮箱登录
+    Route::post('user/emaillogin', 'api/:version.User/emailLogin');
+})->middleware(['ApiUserAuth']); */

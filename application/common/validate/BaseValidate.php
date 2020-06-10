@@ -13,14 +13,14 @@ class BaseValidate extends Validate{
       }
       return true;
     }
-    //验证码验证
-    protected function isPefectCode($value,$rult='',$data='',$field='') {
-      $beforeCode = cache($data['email']);
-      //验证码不存在
-      if(!beforeCode) return "请重新获取验证码";
-      //验证验证码
-      if($value != $beforeCode) return "验证码错误";
-      return true;
-    }
+	//验证码验证
+	protected function isPefectCode($value,$rule='',$data='',$field='') {
+		//验证码不存在
+		$beforeCode = cache($data['email']);
+		if(!$beforeCode) return "请重新获取验证码";
+		//验证验证码
+		if($value != $beforeCode) return "验证码错误";
+		return true;
+	}
 }
 ?>

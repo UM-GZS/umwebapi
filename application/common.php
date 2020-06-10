@@ -27,7 +27,7 @@ function s_mail($sendto, $title, $response)
                 $mail->Host = 'smtp.qq.com';                // SMTP服务器
                 $mail->SMTPAuth = true;                      // 允许 SMTP 认证
                 $mail->Username = 'umgzs@foxmail.com';      // SMTP 用户名  即邮箱的用户名
-                $mail->Password = 'kwvvsbfasscbbfea';                        // SMTP 密码  部分邮箱是授权码(例如163邮箱，不明白看下面有说明)
+                $mail->Password = '';                        // SMTP 密码  部分邮箱是授权码(例如163邮箱，不明白看下面有说明)
                 $mail->SMTPSecure = 'ssl';                   // 允许 TLS 或者ssl协议
                 $mail->Port = 465;                           // 服务器端口 25 或者465 具体要看邮箱服务器支持
      

@@ -17,11 +17,16 @@ class Index extends BaseController
      */
     public function index()
     {
+<<<<<<< HEAD
+      (new CeshiValidate())->goCheck('login');
+      return 111;
+=======
       //(new CeshiValidate())->goCheck();
       $list = [
           ['id'=>10,'title'=>'123'],
           ['id'=>11,'title'=>'456'],
       ];
       return self::showResCode('获取成功',['list'=>$list]);
+>>>>>>> 77233efa282d38491b873a0bad30de0987cfafe3
     }
 }
